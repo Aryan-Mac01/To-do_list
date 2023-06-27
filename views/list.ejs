@@ -3,20 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>List</title>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <h1>It's <%= kindOfDay %></h1>
 
-    <ul>
+    <div class="box" id="heading">
+      <h1>It's <%= kindOfDay %></h1>
+    </div>
+    
+    <div class="box">
       
-      <% for (var i = 0; i<newListItems.length; i++){ %>
-        <li> <%= newListItems[i] %></li>
-      <% } %>
-    </ul>
-
-    <form action="/" method="post">
-      <input type="text" name="newItem">
-      <button type="submit" name="button">Add</button>
-    </form>
+      
+        <% for (var i = 0; i<newListItems.length; i++){ %>
+          <div class="item">
+            <input type="checkbox">
+            <p> <%= newListItems[i] %></p>
+          </div>
+          
+        <% } %>
+        <form action="/" method="post">
+          <input type="text" name="newItem" placeholder>
+          <button type="submit" name="button">+</button>
+        </form>
+      
+  
+    </div>
+    
+    
   </body>
 </html>
