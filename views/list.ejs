@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" >
   <head>
     <meta charset="utf-8">
-    <title>List</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
 
     <div class="box" id="heading">
-      <h1>It's <%= kindOfDay %></h1>
+      <h1><%= listTitle %></h1>
     </div>
     
     <div class="box">
@@ -21,9 +21,9 @@
           </div>
           
         <% } %>
-        <form action="/" method="post">
-          <input type="text" name="newItem" placeholder>
-          <button type="submit" name="button">+</button>
+        <form class="item" action="/" method="post">
+          <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+          <button type="submit" name="list" value=<%= listTitle %>+</button>
         </form>
       
   
